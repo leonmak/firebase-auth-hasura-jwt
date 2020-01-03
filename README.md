@@ -27,6 +27,24 @@ This example assumes that you already have Firebase Auth setup for your app.
 
 Deploy the cloud function inside `functions/` folder:
 
+Add `.firebaserc`
+```json
+{
+  "projects": {
+    "default": "YOUR_PROJECT"
+  }
+}
+```
+
+Add `firebase.json`
+```json
+{
+  "hosting": {
+    "public": "public"
+  }
+}
+```
+
 ```shell
 firebase deploy --only functions
 ```
