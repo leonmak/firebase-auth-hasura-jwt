@@ -47,6 +47,12 @@ Add `firebase.json`
 
 ```shell
 firebase deploy --only functions
+
+// notifications is key name of exports object in functions/index.js
+gcloud beta functions deploy notifications \
+       --runtime nodejs8 --trigger-http \
+       --set-env-vars="FCM_SERVER_KEY=598193652385"
+
 ```
 
 Customize the code to add your logic of assigning roles in the custom claims.
